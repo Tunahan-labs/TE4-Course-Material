@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Starter Template</title>
+  </head>
+  <body>
+    <h1>Welcome to starter template!</h1>
+    <p>This is a basic HTML template to get you started.</p>
+    <form action="">
+      <fieldset>
+        <legend>Fill out this form</legend>
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="number">Phone number</label>
+        <input type="number" name="number" id="number" required />
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+          <option value="" selected disabled>Choose your country</option>
+          <option value="sweden">Sweden</option>
+          <option value="norway">Norway</option>
+          <option value="finland">Finland</option>
+          <option value="denmark">Denmark</option>
+        </select>
+        <br />
+        <label for="message">Your message:</label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
