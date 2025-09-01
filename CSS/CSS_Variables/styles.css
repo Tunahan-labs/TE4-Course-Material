@@ -1,0 +1,25 @@
+:root {
+  --primary-color: blue;
+  --primary-text-color: white;
+  --card-background-color: lightblue;
+  --card-padding: 1rem;
+  --card-border-radius: 8px;
+  --card-alignment: center;
+  --card-height: 300px;
+  --card-width: 300px;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  text-align: var(--card-alignment);
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: 0 auto;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
