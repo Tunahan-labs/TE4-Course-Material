@@ -7,12 +7,14 @@
   --card-alignment: center;
   --card-height: 300px;
   --card-width: 300px;
+  --card-box-shadow: 4px 8px 16px rgb(255, 0, 0);
 }
 
 .card {
   background-color: var(--card-background-color);
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
   text-align: var(--card-alignment);
   width: var(--card-width);
   height: var(--card-height);
