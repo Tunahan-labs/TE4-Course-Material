@@ -106,3 +106,19 @@
   justify-self: left;
   align-self: flex-start;
 }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  height: 100vh;
+  background: #eee;
+}
+
+.grid2-item {
+  background-color: firebrick;
+  padding: 10px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
