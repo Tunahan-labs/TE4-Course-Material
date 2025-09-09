@@ -1,0 +1,23 @@
+:root {
+  --font-family: "eater", static;
+  --heading-size: 2rem, bold;
+  --heading-weight: bold;
+  --paragraph-size: 1rem;
+  --line-height: 1.6;
+  --text-alignment: justify;
+}
+
+h1,
+h2 {
+  font-family: var(--font-family);
+  font-weight: var(--heading-weight);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--paragraph-size);
+  line-height: var(--line-height);
+  text-align: var(--text-alignment);
+}

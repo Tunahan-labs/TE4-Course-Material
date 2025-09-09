@@ -1,0 +1,25 @@
+:root {
+  --primary-color: #0055ff;
+  --secondary-color: #00ba4d;
+  --text-color: white;
+  --font-family: "JetBrains Mono", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+header {
+  height: 65vh;
+}
+
+section {
+  height: 100vh;
+}
