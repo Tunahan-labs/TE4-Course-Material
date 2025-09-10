@@ -1,0 +1,30 @@
+p {
+  text-align: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: ease-in 0.5s;
+  justify-self: center;
+  margin-top: 50px;
+  box-shadow: 0px 0px 10px 5px grey;
+  filter: grayscale(100%);
+}
+
+.card img {
+  width: 250px;
+  height: 250px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 20px 10px grey;
+  filter: grayscale(0%);
+}
