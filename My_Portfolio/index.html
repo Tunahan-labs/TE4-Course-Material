@@ -7,59 +7,47 @@
     <meta name="author" content="Tunahan Kursun" />
     <title>Tunahan Kursun | Portfolio</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/T_Logo.jpg" type="image/x-icon" />
     <script src="./script.js" defer></script>
   </head>
 
+  <header>
+    <h1>Hello, Welcome to my personal portfolio!</h1>
+    <nav>
+      <ul>
+        <li class="nav-item1"><a href="#about">About Me</a></li>
+        <li class="nav-item2"><a href="#projects">Projects</a></li>
+        <li class="nav-item3"><a href="#hire_me">Hire Me!</a></li>
+        <li class="nav-item4"><a href="#contact">Contact Me!</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <body>
-    <header>
-      <h1>Hello, Welcome to my personal portfolio!</h1>
-      <hr />
-      <img src="./assets/T_Logo.jpg" alt="My T Logo" height="300" width="300" />
+    <img src="./assets/T_Logo.jpg" alt="My T Logo" height="300" width="300" />
 
-      <table border="1">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <td>060105</td>
-          <td>Tunahan Kursun</td>
-          <td>tunahankursun369@gmail.com</td>
-          <td>Student</td>
-          <td>
-            <a href="https://github.com/Tunahan-labs" target="_blank" rel="new"
-              >My Github</a
-            >
-          </td>
-        </tbody>
-      </table>
-
-      <table border="1">
+    <table border="1">
+      <thead>
         <tr>
-          <td>
-            <nav>
-              <a href="#about">About Me</a>
-            </nav>
-          </td>
-          <td>
-            <nav>
-              <a href="#projects">Projects</a>
-            </nav>
-          </td>
-          <td>
-            <nav>
-              <a href="#hire_me">Hire Me</a>
-            </nav>
-          </td>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Link</th>
         </tr>
-      </table>
-    </header>
-    <hr />
+      </thead>
+      <tbody>
+        <td>060105</td>
+        <td>Tunahan Kursun</td>
+        <td>tunahankursun369@gmail.com</td>
+        <td>Student</td>
+        <td>
+          <a href="https://github.com/Tunahan-labs" target="_blank" rel="new"
+            >My Github</a
+          >
+        </td>
+      </tbody>
+    </table>
 
     <section id="about">
       <h2>About Me</h2>
@@ -126,7 +114,7 @@
         <h2>Hire me!</h2>
         <fieldset>
           <legend>Project Details</legend>
-          <label for="project_type">Type of project:</label>
+          <label for="project_type" class="l1">Type of project:</label>
           <select name="project_type" id="project_type" required>
             <option value="" selected disabled>Choose project type</option>
             <option value="website">Website</option>
@@ -135,10 +123,12 @@
             <option value="consultation">Consultation</option>
           </select>
           <label for="involved_tech">Involved tech:</label>
-          <input type="checkbox" id="html" name="html" value="html" required />
+          <br />
           <label for="html">HTML</label>
-          <input type="checkbox" id="css" name="css" value="css" required />
+          <input type="checkbox" id="html" name="html" value="html" required />
           <label for="css">CSS</label>
+          <input type="checkbox" id="css" name="css" value="css" required />
+          <label for="javascript">JavaScript</label>
           <input
             type="checkbox"
             id="javascript"
@@ -146,7 +136,6 @@
             value="javascript"
             required
           />
-          <label for="javascript">JavaScript</label>
           <hr />
           <label for="describe_project">Describe your project:</label>
           <textarea
@@ -162,7 +151,7 @@
       </form>
     </section>
 
-    <section id="budget&timeline">
+    <section id="budget_timeline">
       <form action="#" method="post">
         <h2>Budget & Timeline</h2>
         <fieldset>
@@ -178,12 +167,13 @@
             placeholder="ex: 1000"
           />
           <label for="timeline">Timeline:</label>
-          <input type="radio" name="urgency" id="asap" value="asap" />
+          <br />
           <label for="asap">ASAP</label>
-          <input type="radio" name="urgency" id="2_weeks" value="2_weeks" />
+          <input type="radio" name="urgency" id="asap" value="asap" />
           <label for="2_weeks">2 weeks</label>
-          <input type="radio" name="urgency" id="flexible" value="flexible" />
+          <input type="radio" name="urgency" id="2_weeks" value="2_weeks" />
           <label for="flexible">Flexible</label>
+          <input type="radio" name="urgency" id="flexible" value="flexible" />
           <button type="submit" id="budget&timeline">Submit</button>
         </fieldset>
       </form>
