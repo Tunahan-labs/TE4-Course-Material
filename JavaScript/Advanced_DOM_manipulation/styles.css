@@ -1,0 +1,189 @@
+/* Light styles */
+:root {
+  --bg: #fafafa;
+  --text: #111111;
+  --card: #f3f4f6;
+  --muted: #4b5563;
+  --elevated: #f9fafb;
+  --outline: #cccccc;
+  --brand: #2563eb;
+  --backdrop: rgba(0, 0, 0, 0.7);
+  --chip: #111111;
+  --chipText: #ffffff;
+}
+
+/* Base elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 960px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--outline);
+  background: var(--elevated);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.btn:focus {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.viewer {
+  margin: 1rem 0;
+  text-align: center;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.viewer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  cursor: zoom-in;
+}
+
+#caption {
+  margin: 0 0 0.5rem 0;
+  color: var(--muted);
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.thumbs li {
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.thumbs li.active {
+  border: 2px solid var(--brand);
+}
+
+.thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
+.lightBox {
+  border: none;
+  background: transparent;
+}
+
+.lightBox::backdrop {
+  background: var(--backdrop);
+}
+
+.lightBox img {
+  max-width: 90vw;
+  max-height: 75vh;
+  display: block;
+  margin: 2rem auto 0;
+  border-radius: 1rem;
+}
+
+.lightBox p {
+  text-align: center;
+  margin: 0.75rem 0 1rem;
+  color: var(--text);
+}
+
+.lightBox .btn {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+.top-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  padding: 0.6rem 0.7rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--chip);
+  color: var(--chipText);
+  cursor: pointer;
+}
+
+.top-btn:focus {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+/* System dark preferences */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --text: #ffffff;
+    --card: #181f2f;
+    --muted: #4b5563;
+    --elevated: #424547;
+    --outline: #232222;
+    --brand: #2563eb;
+    --backdrop: rgba(0, 0, 0, 0.7);
+    --chip: #454545;
+    --chipText: #ffffff;
+  }
+}
+
+/* Manual overrides for theme */
+body.light {
+  :root {
+    --bg: #fafafa;
+    --text: #111111;
+    --card: #f3f4f6;
+    --muted: #4b5563;
+    --elevated: #f9fafb;
+    --outline: #cccccc;
+    --brand: #2563eb;
+    --backdrop: rgba(0, 0, 0, 0.7);
+    --chip: #111111;
+    --chipText: #ffffff;
+  }
+}
+
+body.dark {
+  :root {
+    --bg: #0f172a;
+    --text: #ffffff;
+    --card: #181f2f;
+    --muted: #4b5563;
+    --elevated: #424547;
+    --outline: #232222;
+    --brand: #2563eb;
+    --backdrop: rgba(0, 0, 0, 0.7);
+    --chip: #454545;
+    --chipText: #ffffff;
+  }
+}
