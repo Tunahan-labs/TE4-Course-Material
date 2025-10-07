@@ -15,8 +15,8 @@
 /* Base elements */
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
@@ -90,16 +90,16 @@ body {
   cursor: pointer;
 }
 
-.lightBox {
+.lightbox {
   border: none;
   background: transparent;
 }
 
-.lightBox::backdrop {
+.lightbox::backdrop {
   background: var(--backdrop);
 }
 
-.lightBox img {
+.lightbox img {
   max-width: 90vw;
   max-height: 75vh;
   display: block;
@@ -107,13 +107,13 @@ body {
   border-radius: 1rem;
 }
 
-.lightBox p {
+.lightbox p {
   text-align: center;
   margin: 0.75rem 0 1rem;
   color: var(--text);
 }
 
-.lightBox .btn {
+.lightbox .btn {
   display: block;
   margin: 0 auto 2rem;
 }
@@ -141,7 +141,7 @@ body {
   left: -9999px;
 }
 
-/* System dark preferences */
+/* system dark preferences */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f172a;
@@ -157,33 +157,28 @@ body {
   }
 }
 
-/* Manual overrides for theme */
+/* manual overrides for theme */
 body.light {
-  :root {
-    --bg: #fafafa;
-    --text: #111111;
-    --card: #f3f4f6;
-    --muted: #4b5563;
-    --elevated: #f9fafb;
-    --outline: #cccccc;
-    --brand: #2563eb;
-    --backdrop: rgba(0, 0, 0, 0.7);
-    --chip: #111111;
-    --chipText: #ffffff;
-  }
+  --bg: #fafafa;
+  --text: #111111;
+  --card: #f3f4f6;
+  --muted: #4b5563;
+  --elevated: #f9fafb;
+  --outline: #cccccc;
+  --brand: #2563eb;
+  --backdrop: rgba(0, 0, 0, 0.7);
+  --chip: #111111;
+  --chipText: #ffffff;
 }
-
 body.dark {
-  :root {
-    --bg: #0f172a;
-    --text: #ffffff;
-    --card: #181f2f;
-    --muted: #4b5563;
-    --elevated: #424547;
-    --outline: #232222;
-    --brand: #2563eb;
-    --backdrop: rgba(0, 0, 0, 0.7);
-    --chip: #454545;
-    --chipText: #ffffff;
-  }
+  --bg: #0f172a;
+  --text: #ffffff;
+  --card: #181f2f;
+  --muted: #4b5563;
+  --elevated: #424547;
+  --outline: #232222;
+  --brand: #2563eb;
+  --backdrop: rgba(0, 0, 0, 0.7);
+  --chip: #454545;
+  --chipText: #ffffff;
 }
