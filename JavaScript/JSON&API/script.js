@@ -28,14 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
   box.innerHTML =
     "<blockquote></blockquote><cite></cite><button>New Quote</button>";
   const [q, a, btn] = box.children;
-
   async function load() {
     try {
       btn.disabled = true;
       btn.textContent = "Loading...";
-      const { content, author } = await fetch(
-        "http://api.quotable.io/random"
-      ).then((r) => r.json());
+      const res = await fetch("http://api.quotable.io/random");
+      const data = await res.json();
+      console.log(data);
+      const content = data.content;
+      const author = data.author;
       q.textContent = `“${content}”`;
       a.textContent = author ? `— ${author} ` : "";
     } catch {
@@ -46,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.textContent = "New Quote";
     }
   }
-
   btn.onclick = load;
   load();
 });
