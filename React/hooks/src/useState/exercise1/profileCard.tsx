@@ -24,8 +24,8 @@ export function ProfileCard() {
 
   return (
     <div>
-      <h2>{user.name}</h2>
-      <p>Age: {user.age}</p>
+      <h2>Name: {user.name}</h2>
+      <h2>Age: {user.age}</h2>
       <button onClick={changeName}>Change Name</button>
       <button onClick={increaseAge}>Increase Age</button>
     </div>

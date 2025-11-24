@@ -1,25 +1,37 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import ContactDetails from "./object";
-import { TodoList } from "./todoList";
 
-import { Greeting } from "./Exercises/greetingMsg";
-import { InputMirror } from "./Exercises/inputMirror";
-import { Counter } from "./Exercises/Counter";
-import { ThemeToggle } from "./Exercises/themeToggle";
-import { ProfileCard } from "./Exercises/profileCard";
-import { FavMovieList } from "./Exercises/favMovieList";
+// UseState
+import { Greeting } from "./useState/exercise1/greetingMsg";
+import { InputMirror } from "./useState/exercise1/inputMirror";
+import { Counter } from "./useState/exercise1/counter";
+import { ThemeToggle } from "./useState/exercise1/themeToggle";
+import { ProfileCard } from "./useState/exercise1/profileCard";
+import { FavMovieList } from "./useState/exercise1/favMovieList";
+
+//UseEffect
+
+// UseRef
+import InputFocus from "./useRef/input.focus";
+import { RenderCounter } from "./useRef/render.counter";
+import { PrevValue } from "./useRef/prevValue";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ContactDetails />
-    <TodoList />
+    // UseState
     <Greeting />
     <InputMirror />
     <Counter />
     <ThemeToggle />
     <ProfileCard />
     <FavMovieList />
+    <hr />
+    //UseEffect
+    <hr />
+    // UseRef
+    <InputFocus />
+    <RenderCounter />
+    <PrevValue />
   </StrictMode>
 );
