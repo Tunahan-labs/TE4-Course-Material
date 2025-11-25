@@ -18,11 +18,16 @@ import InputFocus from "./useRef/exercise3/input.focus";
 import { RenderCounter } from "./useRef/render.counter";
 import { PrevValue } from "./useRef/prevValue";
 
-// Render Application
-import UserCard from "./comp/userCard";
+// Lists of Data
+import UserCard from "./listsOfData/userCard";
 
 // practice
 import { Greetings } from "./practice/greeting";
+
+// conditionals
+import { GreetingComp } from "./conditional/exercise";
+import { Status } from "./conditional/exercise";
+import { User } from "./conditional/exercise";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -42,10 +47,15 @@ createRoot(document.getElementById("root")!).render(
     <RenderCounter />
     <PrevValue />
     <hr />
-    // Render Application
+    // Lists of Data
     <UserCard />
     <hr />
     // practice
     <Greetings />
+    <hr />
+    // conditionals
+    <GreetingComp isLoggedIn={true} />
+    <Status isOnline={true} />
+    <User username="Guest" isAdmin={false} />
   </StrictMode>
 );
