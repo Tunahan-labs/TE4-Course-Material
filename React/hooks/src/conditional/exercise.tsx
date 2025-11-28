@@ -23,13 +23,16 @@ export function Status({ isOnline }: StatusProps) {
 }
 
 // exercise 3
-type UserProps = { username: string; isAdmin: boolean };
+type UserProps = {
+  username: string;
+  isAdmin: boolean;
+};
 
 export function User({ username, isAdmin }: UserProps) {
   return (
     <div>
       <h2>{username}</h2>
-      <p>{isAdmin ? "You have admin access." : "You're a regular user."}</p>
+      {isAdmin && <span style={{ color: "blue" }}>Admin</span>}
     </div>
   );
 }

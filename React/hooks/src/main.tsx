@@ -29,6 +29,12 @@ import { GreetingComp } from "./conditional/exercise";
 import { Status } from "./conditional/exercise";
 import { User } from "./conditional/exercise";
 
+// event handlers
+import CustomButton from "./eventHandlers/custonButton";
+import ToggleComponent from "./eventHandlers/toggleUI";
+import "./eventHandlers/interactiveList";
+import InteractiveList from "./eventHandlers/interactiveList";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     // UseState
@@ -56,6 +62,11 @@ createRoot(document.getElementById("root")!).render(
     // conditionals
     <GreetingComp isLoggedIn={true} />
     <Status isOnline={true} />
-    <User username="Guest" isAdmin={false} />
+    <User username="JohnDoe" isAdmin={true} />
+    <hr />
+    // event handlers
+    <CustomButton onClick={() => alert("Button clicked!")} label="Click Me" />
+    <ToggleComponent />
+    <InteractiveList />
   </StrictMode>
 );
