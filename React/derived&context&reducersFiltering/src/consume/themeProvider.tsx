@@ -11,9 +11,22 @@ const SettingsPage: React.FC = () => {
 
   return (
     <div>
-      <h2>Settings</h2>
-      <p>Current theme: {state.mode}</p>
-      <button onClick={() => dispatch({ type: "TOGGLE_THEME" })}>
+      <p style={{ marginBottom: "10px", fontWeight: "bold" }}>
+        Current theme: {state.mode}
+      </p>
+      <button
+        onClick={() => dispatch({ type: "TOGGLE_THEME" })}
+        style={{
+          borderRadius: "100px",
+          margin: "10px",
+          padding: "10px",
+          fontSize: "0.9rem",
+          fontWeight: "bold",
+          cursor: "pointer",
+          backgroundColor: "#2b6ef6",
+          border: "none",
+        }}
+      >
         Toggle Theme
       </button>
     </div>
